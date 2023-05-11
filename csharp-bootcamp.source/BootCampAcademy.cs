@@ -18,10 +18,29 @@ Bootcamp Academy
 
 public class BootCampAcademy
 {
+    public BootCampAcademy()
+    {
+        
+
+    }
+
+    public void SeedData()
+    {
+        this.Courses.Add(new BootCampCourse() { Name = "C#" });
+        this.Courses.Add(new BootCampCourse() { Name = "Java" });
+        this.Courses.Add(new BootCampCourse() { Name = "Ada" });
+        this.Courses.Add(new BootCampCourse() { Name = "Cobol" });
+    }
 
     public void AddCourse(BootCampCourse course1)
     {
         this.Courses.Add(course1);
     }
+
+    public void RemoveCourse(string name)
+    {
+        throw new NotImplementedException();
+    }
+
     public List<BootCampCourse> Courses { get; set; } = new List<BootCampCourse>();
 }

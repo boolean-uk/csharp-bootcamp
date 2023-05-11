@@ -18,4 +18,16 @@ public class BootCampAcademyTests
         Assert.AreEqual(academy.Courses.Count, 1);
 
     }
+    [Test]
+    public void RemoveCourseFromBootCamp()
+    {
+        BootCampAcademy academy = new BootCampAcademy();
+        academy.SeedData();
+        int count = academy.Courses.Count;
+        string name = "Ada";
+        academy.RemoveCourse(name);
+
+        Assert.AreEqual(academy.Courses.Count,count-1);
+    }
+
 }
