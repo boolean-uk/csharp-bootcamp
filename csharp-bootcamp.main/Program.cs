@@ -8,12 +8,18 @@ BootCampAcademy academy = new BootCampAcademy();
 
 academy.SeedData();
 
-foreach(BootCampCourse x in academy.Courses)
+
+
+
+Console.WriteLine("Enter course name:");
+//write code here
+
+
+
+
+foreach (BootCampCourse x in academy.Courses)
 {
-    
+
     Console.WriteLine(x.Name);
 
 }
-
-
-
