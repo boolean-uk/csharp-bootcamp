@@ -18,9 +18,11 @@ Bootcamp Academy
 
 public class BootCampAcademy
 {
+    private int maxNumberOfCourses = 5;
+
     public BootCampAcademy()
     {
-        
+
 
     }
 
@@ -37,10 +39,17 @@ public class BootCampAcademy
         this.Courses.Add(course1);
     }
 
-    public void RemoveCourse(string name)
+    public bool RemoveCourse(string name)
     {
-        throw new NotImplementedException();
+        var itemToRemove = this.Courses.FirstOrDefault(x => x.Name == name);
+        if (itemToRemove != null)
+        {
+            return this.Courses.Remove(itemToRemove) ? true : false;
+        }
+        return false;
     }
-
+    
     public List<BootCampCourse> Courses { get; set; } = new List<BootCampCourse>();
+
+    public int MaxNumberOfCourses { get => maxNumberOfCourses; }
 }

@@ -25,8 +25,9 @@ public class BootCampAcademyTests
         academy.SeedData();
         int count = academy.Courses.Count;
         string name = "Ada";
-        academy.RemoveCourse(name);
+        bool removeResult = academy.RemoveCourse(name);
 
+        Assert.IsTrue(removeResult);
         Assert.AreEqual(academy.Courses.Count,count-1);
     }
 
