@@ -41,7 +41,7 @@ public class BootCampAcademy
 
     public bool RemoveCourse(string name)
     {
-        var itemToRemove = this.Courses.FirstOrDefault(x => x.Name == name);
+        BootCampCourse itemToRemove = this.Courses.FirstOrDefault(x => x.Name == name);
         if (itemToRemove != null)
         {
             return this.Courses.Remove(itemToRemove) ? true : false;
