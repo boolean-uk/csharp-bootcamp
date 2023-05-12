@@ -36,7 +36,7 @@ namespace csharp_bootcamp.source
                     default:
                         Console.WriteLine($"you entered: {operation}");
                         _speechSynthesizer.Speak(operation);
-                        //Console.Clear();
+                        
                         break;
                 }
             }
